@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   end
 
   # Create user and signin and destory user signout
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create] do
+    get :current, on: :collection
+  end
 
   resource :session, only: [:new, :create] do
     delete :destroy, on: :collection
