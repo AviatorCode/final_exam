@@ -3,7 +3,7 @@ class CreateAuctions < ActiveRecord::Migration[5.2]
     create_table :auctions do |t|
       t.string :title
       t.text :description
-      t.float :end_at_date
+      t.date :end_at_date
       t.float :reserve_price
       t.float :current_price
       t.references :user, foreign_key: true

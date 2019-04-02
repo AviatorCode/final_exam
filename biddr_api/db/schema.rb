@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_04_01_213630) do
   create_table "auctions", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.float "end_at_date"
+    t.date "end_at_date"
     t.float "reserve_price"
     t.float "current_price"
     t.bigint "user_id"
